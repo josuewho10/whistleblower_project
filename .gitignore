@@ -1,0 +1,22 @@
+# Entorno virtual
+venv/
+env/
+ENV/
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Base de datos (opcional, pero recomendado no subirla si tiene datos sensibles)
+# db.sqlite3
+
+# Variables de entorno y logs
+.env
+*.log
+
+# IDE
+.vscode/
+.idea/
+.DS_Store

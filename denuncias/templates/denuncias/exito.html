@@ -1,0 +1,29 @@
+Set-Content -Path "denuncias\templates\denuncias\exito.html" -Encoding ascii
+-Value @' {% extends 'denuncias/base.html' %} {% block title %}Denuncia
+Recibida{% endblock %} {% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-7">
+    <div class="card text-center">
+      <div class="card-body p-5">
+        <i
+          class="bi bi-check-circle-fill text-success"
+          style="font-size: 5rem"
+        ></i>
+        <h2 class="mt-3">Denuncia Registrada</h2>
+        <p class="text-muted">
+          Su denuncia ha sido recibida de forma segura y confidencial. Un equipo
+          de auditores la revisar en las prximas 48 horas.
+        </p>
+        <div class="d-flex justify-content-center gap-2 mt-4">
+          <a href="{% url 'registrar_denuncia' %}" class="btn btn-danger">
+            <i class="bi bi-plus-circle"></i> Registrar otra
+          </a>
+          <a href="/" class="btn btn-outline-secondary">
+            <i class="bi bi-house"></i> Inicio
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} '@
